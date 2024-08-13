@@ -1,7 +1,6 @@
 package com.foodapp.Food.Application.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.foodapp.Food.Application.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +13,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "orders")
 public class Order {
 
     @Id

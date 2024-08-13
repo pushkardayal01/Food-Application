@@ -1,27 +1,36 @@
 package com.foodapp.Food.Application.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import jdk.jfr.Enabled;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Category {
+public class CardItem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long CategoryId;
+    public Long CardItemId;
 
-    private String name;
+    @JoinColumn
+    @ManyToOne
+    public Card card;
 
     @ManyToOne
-    @JsonIgnore
-    private Resturant resturant;
+    private  Food food;
+
+    private int quantity;
+
+    private List<String> ingredent;
+
+    private Long total_price;
 
 
 }

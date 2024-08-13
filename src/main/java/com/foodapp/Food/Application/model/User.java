@@ -1,11 +1,7 @@
-package com.foodapp.Food.Application;
+package com.foodapp.Food.Application.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.foodapp.Food.Application.dto.Resturantdto;
-import com.foodapp.Food.Application.model.Address;
-import com.foodapp.Food.Application.model.Order;
-import com.foodapp.Food.Application.model.Resturant;
-import com.foodapp.Food.Application.model.USER_ROLE;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
