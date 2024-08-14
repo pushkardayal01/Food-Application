@@ -20,7 +20,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long OrderId;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User customer;
+
 
     @JsonIgnore
     @ManyToOne
@@ -30,7 +33,7 @@ public class Order {
 
     private Date createdAt;
 
-    @OneToMany
+    @ManyToOne
     private Address deliveryaddres;
 
     @OneToMany

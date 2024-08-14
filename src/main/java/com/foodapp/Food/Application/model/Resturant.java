@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -47,7 +48,7 @@ public class Resturant {
     private List<String> images;
 
 
-    private Date registrationdate;
+    private LocalDateTime registrationdate;
 
     private  boolean open;
 
