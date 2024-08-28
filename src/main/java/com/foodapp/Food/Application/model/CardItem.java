@@ -2,7 +2,6 @@ package com.foodapp.Food.Application.model;
 
 
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +20,7 @@ public class CardItem {
 
     @JoinColumn
     @ManyToOne
-    public Card card;
+    public Cart card;
 
     @ManyToOne
     private  Food food;
