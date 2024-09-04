@@ -1,6 +1,7 @@
 package com.foodapp.Food.Application.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.foodapp.Food.Application.dto.Resturantdto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,7 +24,10 @@ public class User {
 
     private String name;
     private String email;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+
 
     private USER_ROLE role = USER_ROLE.ROLE_CUSTOMER;
 
